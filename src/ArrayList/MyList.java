@@ -1,3 +1,5 @@
+package ArrayList;
+
 public interface MyList<T> {
     /**
      * Returns the size of the list (how many elements are in the list)

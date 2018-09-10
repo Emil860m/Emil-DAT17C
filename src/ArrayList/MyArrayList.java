@@ -1,10 +1,14 @@
+package ArrayList;
+
+import ArrayList.MyList;
+
 import java.util.List;
 import java.util.Arrays;
 
 import static java.util.Arrays.copyOf;
 
 
-public class MyArrayList<T> implements MyList{
+public class MyArrayList<T> implements MyList {
 
     private T[] data = (T[])new Object[10];
     private int size = 0;
