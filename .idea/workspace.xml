@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec2b44e7-84a0-4e9c-b694-5488dcb60d81" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Emil-DAT17C.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyList.java" afterDir="false" />
-    </list>
+    <list default="true" id="ec2b44e7-84a0-4e9c-b694-5488dcb60d81" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,12 +15,11 @@
       <file leaf-file-name="MyArrayList.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyArrayList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
-              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            <state relative-caret-position="833">
+              <caret line="52" column="33" lean-forward="true" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
               <folding>
                 <element signature="e#150#151#0" expanded="true" />
                 <element signature="e#182#183#0" expanded="true" />
-                <element signature="e#1132#1133#0" expanded="true" />
                 <element signature="e#1166#1167#0" expanded="true" />
               </folding>
             </state>
@@ -175,12 +166,12 @@
       <option name="presentableId" value="Default" />
       <updated>1536565226057</updated>
       <workItem from="1536565231330" duration="162000" />
-      <workItem from="1536565539895" duration="272000" />
+      <workItem from="1536565539895" duration="1021000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="434000" />
+    <option name="totallyTimeSpent" value="1183000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-6" width="1319" height="925" extended-state="6" />
@@ -230,7 +221,6 @@
           <folding>
             <element signature="e#150#151#0" expanded="true" />
             <element signature="e#182#183#0" expanded="true" />
-            <element signature="e#1132#1133#0" expanded="true" />
             <element signature="e#1166#1167#0" expanded="true" />
           </folding>
         </state>
@@ -245,12 +235,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        <state relative-caret-position="833">
+          <caret line="52" column="33" lean-forward="true" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
           <folding>
             <element signature="e#150#151#0" expanded="true" />
             <element signature="e#182#183#0" expanded="true" />
-            <element signature="e#1132#1133#0" expanded="true" />
             <element signature="e#1166#1167#0" expanded="true" />
           </folding>
         </state>
