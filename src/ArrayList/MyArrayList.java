@@ -38,7 +38,7 @@ public class MyArrayList<T> implements MyList {
     @Override
     public Object remove(int index) {
         Object tempObject="Invalid input";
-        if(index>0&&index<size) {
+        if(index>=0&&index<size) {
             tempObject = data[index];
             for (int i = index; i < size; i++) {
                 data[i] = data[i + 1];
@@ -50,7 +50,7 @@ public class MyArrayList<T> implements MyList {
 
     @Override
     public Object get(int index){
-        if(data[index]!=null) {
+        if(index>=0&&index<size) {
             return data[index];
         }
         else {
@@ -62,9 +62,9 @@ public class MyArrayList<T> implements MyList {
     public String toString() {
         String temp = "";
         for(int i = 0; i<size-1;i++){
-            temp+=data[i] + ", ";
+            temp+=data[i].toString() + ", ";
         }
-        temp+=data[size-1];
+        temp+=data[size-1].toString();
         return "MyArrayList{"+temp+"}";
     }
 }
