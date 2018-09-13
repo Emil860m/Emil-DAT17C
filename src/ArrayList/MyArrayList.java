@@ -40,7 +40,7 @@ public class MyArrayList<T> implements MyList {
         Object tempObject="Invalid input";
         if(index>=0&&index<size) {
             tempObject = data[index];
-            for (int i = index; i < size; i++) {
+            for (int i = index; i <= size; i++) {
                 data[i] = data[i + 1];
             }
             size--;
