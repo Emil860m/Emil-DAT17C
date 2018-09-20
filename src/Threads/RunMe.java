@@ -9,7 +9,6 @@ public class RunMe {
             for (int i = 0; i < 1000000; i++) {
                 c.increment();
             }
-
         });
 //        Klassisk måde at skrive det, uden en lambda expression
         Thread t2 = new Thread(new Runnable() {
