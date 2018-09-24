@@ -1,16 +1,17 @@
 package Primenumber;
 public class Prime {
-    public static void main(String [] args) {
+    public static void main(String [] args) throws InterruptedException {
         long max = 10_000_000L;
         LongCounter counter = new LongCounter();
-        int noOfThreads = 4;
+        int noOfThreads = 1000;
         Thread[] threadArray = new Thread[noOfThreads];
 
-        long start = System.currentTimeMillis();
+        double start = System.currentTimeMillis();
         for (int i = 1; i <= noOfThreads ; i++) {
+
             int finalI = i;
             Thread t = new Thread(()->{
-                for(int j = (int)max/(noOfThreads)-1; j <=max/noOfThreads* finalI; j++){
+                for(int j = (int) (1+((max/(noOfThreads)*finalI)-(max/noOfThreads))); j <=(max/noOfThreads)* finalI; j++){
                     if (isPrime(j)) {
                         counter.increment();
                     }
@@ -19,15 +20,32 @@ public class Prime {
             threadArray[i-1] = t;
 
         }
-
-        for (int i = 0; i < threadArray.length ; i++) {
-            threadArray[i].start();
-            try {
-                threadArray[i].join();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+        for (Thread t: threadArray) {
+            t.start();
             }
+        for (Thread t: threadArray) {
+            t.join();
         }
+
+//        threadArray[0].start();
+//        threadArray[1].start();
+//        threadArray[2].start();
+//        threadArray[3].start();
+//        threadArray[4].start();
+//        threadArray[0].join();
+//        threadArray[1].join();
+//        threadArray[2].join();
+//        threadArray[3].join();
+//        threadArray[4].join();
+
+//        for (int i = 0; i < threadArray.length ; i++) {
+//            threadArray[i].start();
+//            try {
+//                threadArray[i].join();
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
 
         /*Thread t1 = new Thread(()->{
         for(int i = 1; i <=(max/noOfThreads);i++){
@@ -50,8 +68,8 @@ public class Prime {
 
 
         System.out.println(counter.get() + " primes");
-        long stop = System.currentTimeMillis();
-        System.out.println(stop-start);
+        double stop = System.currentTimeMillis();
+        System.out.println((stop-start)/1000 + " seconds");
     }
 
 
