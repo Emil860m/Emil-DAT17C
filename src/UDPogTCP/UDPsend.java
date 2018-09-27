@@ -9,12 +9,14 @@ public class UDPsend {
         final int PORT_IN = 5656;
         final int PORT_OUT = 5657;
         final String IP = "127.0.0.1";
+        String message = "";
         
         try {
             DatagramSocket socket = new DatagramSocket(PORT_IN);
-            while(true) {
+            do {
+                System.out.println("Type yo message!");
                 Scanner scanner = new Scanner(System.in);
-                String message = scanner.nextLine();
+                message = scanner.nextLine();
 
                 byte[] data = message.getBytes();
                 InetAddress address = InetAddress.getByName(IP);
@@ -22,7 +24,8 @@ public class UDPsend {
                 DatagramPacket packet = new DatagramPacket(data, data.length, address, PORT_OUT);
 
                 socket.send(packet);
-            }
+                System.out.println("Sick message, bro!");
+            }while(!message.equalsIgnoreCase("quit"));
 
         } catch (SocketException e) {
             e.printStackTrace();

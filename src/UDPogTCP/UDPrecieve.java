@@ -7,21 +7,22 @@ public class UDPrecieve {
     public static void main(String [] args){
         final int PORT_IN = 5657;
         final int PORT_OUT = 5656;
+        String message = "";
 //        final String IP = "127.0.0.1";
 
         try {
             DatagramSocket socket = new DatagramSocket(PORT_IN);
-//            String message = "Hello from UDPrecieve";
 
-            byte[] data = new byte[1024];
-//            InetAddress address = InetAddress.getByName(IP);
+            do{
+                byte[] data = new byte[1024];
 
-            DatagramPacket packet = new DatagramPacket(data, data.length);
-            while (true) {
+
+                DatagramPacket packet = new DatagramPacket(data, data.length);
+
                 socket.receive(packet);
-                String message = new String(data);
+                message = new String(data).trim();
                 System.out.println(message);
-            }
+            }while(!message.equalsIgnoreCase("quit"));
         } catch (SocketException e) {
             e.printStackTrace();
         } catch (UnknownHostException e) {
