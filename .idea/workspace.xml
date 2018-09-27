@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec2b44e7-84a0-4e9c-b694-5488dcb60d81" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Freestyle/Freestyle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UDPogTCP/UDPrecieve.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UDPogTCP/UDPsend.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Emil-DAT17C/Primenumber/Prime.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Emil-DAT17C/Primenumber/Prime.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Primenumber/Prime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primenumber/Prime.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,15 +25,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CasinoCopenhagen/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Dealer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CasinoCopenhagen/Dealer.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -47,17 +37,41 @@
       <file leaf-file-name="Prime.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Primenumber/Prime.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+            <state relative-caret-position="340">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Freestyle.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UDPsend.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/UDPogTCP/UDPsend.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UDPrecieve.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UDPogTCP/UDPrecieve.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Freestyle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Freestyle/Freestyle.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -101,15 +115,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tournament.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CasinoCopenhagen/Tournament.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -141,8 +146,10 @@
         <option value="$PROJECT_DIR$/src/CasinoCopenhagen/Dealer.java" />
         <option value="$PROJECT_DIR$/src/Primenumber/Counter.java" />
         <option value="$PROJECT_DIR$/src/Primenumber/LongCounter.java" />
-        <option value="$PROJECT_DIR$/src/Primenumber/Prime.java" />
         <option value="$PROJECT_DIR$/src/Freestyle/Freestyle.java" />
+        <option value="$PROJECT_DIR$/src/Primenumber/Prime.java" />
+        <option value="$PROJECT_DIR$/src/UDPogTCP/UDPrecieve.java" />
+        <option value="$PROJECT_DIR$/src/UDPogTCP/UDPsend.java" />
       </list>
     </option>
   </component>
@@ -163,9 +170,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,10 +218,19 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Threads" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Emil-DAT17C" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Emil-DAT17C" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="UDPogTCP" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -245,7 +258,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Freestyle">
+  <component name="RunManager" selected="Application.UDPsend">
     <configuration name="CasinoMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CasinoCopenhagen.CasinoMain" />
       <module name="Emil-DAT17C" />
@@ -279,13 +292,24 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="RunMe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Threads.RunMe" />
+    <configuration name="UDPrecieve" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UDPogTCP.UDPrecieve" />
       <module name="Emil-DAT17C" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Threads.*" />
+          <option name="PATTERN" value="UDPogTCP.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="UDPsend" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UDPogTCP.UDPsend" />
+      <module name="Emil-DAT17C" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UDPogTCP.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -332,17 +356,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.RunMe" />
       <item itemvalue="Application.CasinoMain" />
       <item itemvalue="Application.Prime" />
       <item itemvalue="Application.Freestyle" />
+      <item itemvalue="Application.UDPsend" />
+      <item itemvalue="Application.UDPrecieve" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UDPsend" />
+        <item itemvalue="Application.UDPrecieve" />
         <item itemvalue="Application.Freestyle" />
         <item itemvalue="Application.Prime" />
         <item itemvalue="Application.CasinoMain" />
-        <item itemvalue="Application.RunMe" />
       </list>
     </recent_temporary>
   </component>
@@ -362,78 +388,80 @@
       <workItem from="1536820797658" duration="9480000" />
       <workItem from="1537166604535" duration="3575000" />
       <workItem from="1537426931332" duration="6422000" />
-      <workItem from="1537771215440" duration="7223000" />
+      <workItem from="1537771215440" duration="7943000" />
+      <workItem from="1537791727758" duration="1822000" />
+      <workItem from="1538030443744" duration="6152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28725000" />
+    <option name="totallyTimeSpent" value="37419000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-6" width="1319" height="925" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.32911393" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32911393" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32911393" />
       <window_info anchor="bottom" id="Sequence" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27359238" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32911393" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28310865" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32911393" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.32911393" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32911393" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26566216" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32911393" />
       <window_info anchor="bottom" id="Sequence" order="12" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26566216" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,27 +476,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/CasinoCopenhagen/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CasinoCopenhagen/Tournament.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Primenumber/Prime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CasinoCopenhagen/CasinoMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -758,17 +765,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Primenumber/Prime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Freestyle/Freestyle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Primenumber/UDPsend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Primenumber/Prime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UDPogTCP/UDPrecieve.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UDPogTCP/UDPsend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
