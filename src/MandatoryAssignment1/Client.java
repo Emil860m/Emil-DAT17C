@@ -33,6 +33,7 @@ public class Client {
 
         String finalIp = ip;
         Socket clientSocket = new Socket(finalIp, port);
+        System.out.println("Connected \nType !join to join chat");
         DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
         BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
         Thread send = new Thread(()->{
@@ -44,7 +45,7 @@ public class Client {
 
                     //System.out.println("Please type your text: ");
                     inFromUser = clientInput.nextLine();
-                    if(inFromUser.equals("JOIN")){
+                    if(inFromUser.equalsIgnoreCase("!JOIN")){
                         outToServer.writeBytes(joinCMD + '\n');
                     }
                     else {
