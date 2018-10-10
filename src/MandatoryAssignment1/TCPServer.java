@@ -4,7 +4,7 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Server {
+public class TCPServer {
     public static void main(String [] args) {
         System.out.println("Server");
         final int PORT_IN = 5656;
