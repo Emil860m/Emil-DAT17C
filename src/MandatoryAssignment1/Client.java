@@ -8,8 +8,8 @@ public class Client {
     private Socket socket;
     private InputStream inFromClient;
     private OutputStream outToClient;
-    private int clientNr;
-    private static int clientCount;
+    //private int clientNr;
+    //private static int clientCount;
     private String IP;
     private int Port;
     private int secondsSinceIMAV;
@@ -48,12 +48,12 @@ public class Client {
         this.connected = connected;
     }
 
-    public Client(String userName, Socket socket, InputStream inFromClient, OutputStream outToClient, int clientNr) {
+    public Client(String userName, Socket socket, InputStream inFromClient, OutputStream outToClient) {
         this.userName = userName;
         this.socket = socket;
         this.inFromClient = inFromClient;
         this.outToClient = outToClient;
-        this.clientNr = clientNr;
+        //this.clientNr = clientNr;
     }
 
     public int getPort() {
@@ -74,12 +74,12 @@ public class Client {
 
     public Client() {
     }
-    public static int getClientCount(){
-        return clientCount;
-    }
-    public static void incrementClientCount(){
-        clientCount++;
-    }
+//    public static int getClientCount(){
+//        return clientCount;
+//    }
+//    public static void incrementClientCount(){
+//        clientCount++;
+//    }
 
     public String getUserName() {
         return userName;
@@ -118,17 +118,17 @@ public class Client {
         this.outToClient = outToClient;
     }
 
-    public int getClientNr() {
-        return clientNr;
-    }
-
-    public void setClientNr(int clientNr) {
-        this.clientNr = clientNr;
-    }
-
-    public static void setClientCount(int clientCount) {
-        Client.clientCount = clientCount;
-    }
+//    public int getClientNr() {
+//        return clientNr;
+//    }
+//
+//    public void setClientNr(int clientNr) {
+//        this.clientNr = clientNr;
+//    }
+//
+//    public static void setClientCount(int clientCount) {
+//        Client.clientCount = clientCount;
+//    }
 
     public void sendToAll(String message){
 
