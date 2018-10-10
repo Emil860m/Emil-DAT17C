@@ -72,11 +72,26 @@ public class TCPClient {
             }
         });
 
+        Thread IMAV = new Thread(()->{
+           while(true){
+               try {
+                   Thread.sleep(10000);
+                   outToServer.writeBytes("IMAV");
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               } catch (IOException e) {
+                   e.printStackTrace();
+               }
+           }
+        });
+
         send.start();
         receive.start();
+        IMAV.start();
         try {
             send.join();
             receive.join();
+            IMAV.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
