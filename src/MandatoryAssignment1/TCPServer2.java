@@ -57,8 +57,10 @@ public class TCPServer2 {
                                         if(msg.contains("IMAV")){
                                             client.setSecondsSinceIMAV(0);
                                         }else if(msg.contains("QUIT")){
+                                            System.out.println("Client disconnected!");
                                             client.getOutToClient().write("QUIT".getBytes());
                                             client.setConnected(false);
+                                            sendMessageToAll(client.getUserName()+ " disconnected!");
                                             break;
                                         }else if(msg.contains("DATA")){
                                             msg = msg.replaceAll("DATA ", "");

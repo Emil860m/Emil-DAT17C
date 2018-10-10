@@ -48,6 +48,8 @@ public class TCPClient {
 
                     if(inFromUser.equalsIgnoreCase("quit"))test = false;
                 }while(test);
+                Thread.currentThread().interrupt();
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -69,6 +71,7 @@ public class TCPClient {
 //                    System.out.println("From server: " + serverInput);
                     if(msgIn.equalsIgnoreCase("QUIT"))test=false;
                 }while(test);
+                Thread.currentThread().interrupt();
             }catch (Exception e){
 
             }
@@ -85,7 +88,7 @@ public class TCPClient {
                    e.printStackTrace();
                }
            }
-
+            Thread.currentThread().interrupt();
         });
 
         send.start();
