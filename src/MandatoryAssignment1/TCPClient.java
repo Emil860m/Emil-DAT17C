@@ -1,9 +1,6 @@
 package MandatoryAssignment1;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
@@ -33,9 +30,11 @@ public class TCPClient {
 
         String finalIp = ip;
         Socket clientSocket = new Socket(finalIp, port);
-        System.out.println("Connected \nType !join to join chat");
-        DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
-        BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+        //System.out.println("Connected \nType !join to join chat");
+        OutputStream outToServer = clientSocket.getOutputStream();
+        InputStream inFromServer = clientSocket.getInputStream();
+        byte[] join = joinCMD.getBytes();
+        outToServer.write(join);
         Thread send = new Thread(()->{
             try {
                 boolean test = true;
@@ -45,12 +44,8 @@ public class TCPClient {
 
                     //System.out.println("Please type your text: ");
                     inFromUser = clientInput.nextLine();
-                    if(inFromUser.equalsIgnoreCase("!JOIN")){
-                        outToServer.writeBytes(joinCMD + '\n');
-                    }
-                    else {
-                        outToServer.writeBytes(inFromUser + '\n');
-                    }
+                        outToServer.write(inFromUser.getBytes());
+
                     if(inFromUser.equalsIgnoreCase("quit"))test = false;
                 }while(test);
             } catch (IOException e) {
@@ -62,10 +57,17 @@ public class TCPClient {
             try{
                 boolean test = true;
                 do{
-                    String serverInput = null;
-                    serverInput = inFromServer.readLine();
-                    System.out.println("From server: " + serverInput);
-                    if(serverInput.equalsIgnoreCase("quit"))test=false;
+                    byte[] dataIn = new byte[1024];
+                    inFromServer.read(dataIn);
+                    String msgIn = new String(dataIn);
+                    msgIn = msgIn.trim();
+
+
+                    System.out.println(msgIn);
+//                    String serverInput = null;
+//                    serverInput = inFromServer.read();
+//                    System.out.println("From server: " + serverInput);
+                    if(msgIn.equalsIgnoreCase("QUIT"))test=false;
                 }while(test);
             }catch (Exception e){
 
@@ -73,16 +75,17 @@ public class TCPClient {
         });
 
         Thread IMAV = new Thread(()->{
-           while(true){
+           while(true && send.isAlive()){
                try {
                    Thread.sleep(10000);
-                   outToServer.writeBytes("IMAV");
+                   outToServer.write("IMAV".getBytes());
                } catch (InterruptedException e) {
                    e.printStackTrace();
                } catch (IOException e) {
                    e.printStackTrace();
                }
            }
+
         });
 
         send.start();

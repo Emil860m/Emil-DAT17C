@@ -1,23 +1,75 @@
 package MandatoryAssignment1;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
+import java.io.*;
 import java.net.Socket;
 
 public class Client {
     private String userName;
     private Socket socket;
-    private BufferedReader inFromClient;
-    private DataOutputStream outToClient;
+    private InputStream inFromClient;
+    private OutputStream outToClient;
     private int clientNr;
     private static int clientCount;
+    private String IP;
+    private int Port;
+    private int secondsSinceIMAV;
+    private boolean connected;
+    private Thread IMAVincrementer = new Thread(()->{
+        while(connected){
+            try{
+                incrementIMAV();
+                if(getSecondsSinceIMAV()<10){
+                    connected = false;
+                    break;
+                }
+                Thread.sleep(1000);
+            }catch(Exception E){
 
-    public Client(String userName, Socket socket, BufferedReader inFromClient, DataOutputStream outToClient, int clientNr) {
+            }
+        }
+    });
+
+    public void incrementIMAV(){
+        secondsSinceIMAV++;
+    }
+    public int getSecondsSinceIMAV() {
+        return secondsSinceIMAV;
+    }
+
+    public void setSecondsSinceIMAV(int secondsSinceIMAV) {
+        this.secondsSinceIMAV = secondsSinceIMAV;
+    }
+
+    public boolean isConnected() {
+        return connected;
+    }
+
+    public void setConnected(boolean connected) {
+        this.connected = connected;
+    }
+
+    public Client(String userName, Socket socket, InputStream inFromClient, OutputStream outToClient, int clientNr) {
         this.userName = userName;
         this.socket = socket;
         this.inFromClient = inFromClient;
         this.outToClient = outToClient;
         this.clientNr = clientNr;
+    }
+
+    public int getPort() {
+        return Port;
+    }
+
+    public void setPort(int port) {
+        Port = port;
+    }
+
+    public String getIP() {
+        return IP;
+    }
+
+    public void setIP(String IP) {
+        this.IP = IP;
     }
 
     public Client() {
@@ -45,19 +97,45 @@ public class Client {
         this.socket = socket;
     }
 
-    public BufferedReader getInFromClient() {
-        return inFromClient;
-    }
-
-    public void setInFromClient(BufferedReader inFromClient) {
-        this.inFromClient = inFromClient;
-    }
-
-    public DataOutputStream getOutToClient() {
-        return outToClient;
-    }
 
     public void setOutToClient(DataOutputStream outToClient) {
         this.outToClient = outToClient;
+    }
+
+    public InputStream getInFromClient() {
+        return inFromClient;
+    }
+
+    public void setInFromClient(InputStream inFromClient) {
+        this.inFromClient = inFromClient;
+    }
+
+    public OutputStream getOutToClient() {
+        return outToClient;
+    }
+
+    public void setOutToClient(OutputStream outToClient) {
+        this.outToClient = outToClient;
+    }
+
+    public int getClientNr() {
+        return clientNr;
+    }
+
+    public void setClientNr(int clientNr) {
+        this.clientNr = clientNr;
+    }
+
+    public static void setClientCount(int clientCount) {
+        Client.clientCount = clientCount;
+    }
+
+    public void sendToAll(String message){
+
+    }
+
+    @Override
+    public String toString() {
+        return getUserName();
     }
 }
