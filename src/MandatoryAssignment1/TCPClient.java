@@ -10,6 +10,9 @@ public class TCPClient {
         int port;
         String ip;
         String userName;
+        OutputStream outToServer;
+        InputStream inFromServer;
+        boolean UNaccept = true;
 
 
 
@@ -18,33 +21,40 @@ public class TCPClient {
         Scanner input = new Scanner(System.in);
 
 
-        System.out.println("Write server ip: ");
-        ip = input.next();
-        System.out.println("Write port:");
-        port = input.nextInt();
-        System.out.println("Write Username:");
-        userName = input.next();
-        System.out.println("trying to connect");
+            System.out.println("Write server ip: ");
+            ip = input.next();
+            System.out.println("Write port:");
+            port = input.nextInt();
+            do{
+            System.out.println("Write Username:");
+            userName = input.next();
+            if(true) {
+                System.out.println("trying to connect");
 
-        String joinCMD = "JOIN " + userName + ", " + ip + ":" + port;
+                String joinCMD = "JOIN " + userName + ", " + ip + ":" + port;
 
-        String finalIp = ip;
-        Socket clientSocket = new Socket(finalIp, port);
-        //System.out.println("Connected \nType !join to join chat");
-        OutputStream outToServer = clientSocket.getOutputStream();
-        InputStream inFromServer = clientSocket.getInputStream();
-        byte[] join = joinCMD.getBytes();
-        outToServer.write(join);
+                String finalIp = ip;
+                Socket clientSocket = new Socket(finalIp, port);
+                outToServer = clientSocket.getOutputStream();
+                inFromServer = clientSocket.getInputStream();
+                byte[] join = joinCMD.getBytes();
+                byte[] accept = new byte[1024];
+                outToServer.write(join);
+                inFromServer.read(accept);
+                String userNameAccept = new String(accept);
+                userNameAccept.trim();
+                if (userNameAccept.equals("J_OK"))UNaccept = false;
+            }
+        }while(UNaccept);
+        OutputStream finalOutToServer = outToServer;
         Thread send = new Thread(()->{
             try {
                 boolean test = true;
                 do {
                     Scanner clientInput = new Scanner(System.in);
                     String inFromUser;
-
-                    //System.out.println("Please type your text: ");
                     inFromUser = clientInput.nextLine();
-                        outToServer.write(inFromUser.getBytes());
+                        finalOutToServer.write(inFromUser.getBytes());
 
                     if(inFromUser.equalsIgnoreCase("quit"))test = false;
                 }while(test);
@@ -55,20 +65,18 @@ public class TCPClient {
             }
         });
 
+        InputStream finalInFromServer = inFromServer;
         Thread receive = new Thread(()->{
             try{
                 boolean test = true;
                 do{
                     byte[] dataIn = new byte[1024];
-                    inFromServer.read(dataIn);
+                    finalInFromServer.read(dataIn);
                     String msgIn = new String(dataIn);
                     msgIn = msgIn.trim();
 
 
                     System.out.println(msgIn);
-//                    String serverInput = null;
-//                    serverInput = inFromServer.read();
-//                    System.out.println("From server: " + serverInput);
                     if(msgIn.equalsIgnoreCase("QUIT"))test=false;
                 }while(test);
                 Thread.currentThread().interrupt();
@@ -77,11 +85,12 @@ public class TCPClient {
             }
         });
 
+        OutputStream finalOutToServer1 = outToServer;
         Thread IMAV = new Thread(()->{
-           while(true && send.isAlive()){
+           while(send.isAlive()){
                try {
                    Thread.sleep(10000);
-                   outToServer.write("IMAV".getBytes());
+                   finalOutToServer1.write("IMAV".getBytes());
                } catch (InterruptedException e) {
                    e.printStackTrace();
                } catch (IOException e) {

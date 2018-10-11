@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec2b44e7-84a0-4e9c-b694-5488dcb60d81" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/API/OpenWeatherMap.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/API/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MandatoryAssignment1/TCPServer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MandatoryAssignment1/TCPServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MandatoryAssignment1/TCPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MandatoryAssignment1/TCPClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MandatoryAssignment1/TCPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MandatoryAssignment1/TCPServer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,28 +18,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TCPServer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/MandatoryAssignment1/TCPServer.java">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/API/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="62" column="84" selection-start-line="62" selection-start-column="84" selection-end-line="62" selection-end-column="84" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="198">
+              <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MandatoryAssignment1/Client.java">
+      <file leaf-file-name="OpenWeatherMap.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/API/OpenWeatherMap.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1377">
-              <caret line="125" column="33" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3035#3036#0" expanded="true" />
-                <element signature="e#3071#3072#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="901">
+              <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -44,8 +39,20 @@
       <file leaf-file-name="TCPClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MandatoryAssignment1/TCPClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="50" column="51" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
+            <state relative-caret-position="459">
+              <caret line="36" column="30" lean-forward="true" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TCPServer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MandatoryAssignment1/TCPServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,6 +66,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -91,9 +99,11 @@
         <option value="$PROJECT_DIR$/src/UDPogTCP/TCP_Server.java" />
         <option value="$PROJECT_DIR$/src/MandatoryAssignment1/Server.java" />
         <option value="$PROJECT_DIR$/src/MandatoryAssignment1/User.java" />
-        <option value="$PROJECT_DIR$/src/MandatoryAssignment1/Client.java" />
-        <option value="$PROJECT_DIR$/src/MandatoryAssignment1/TCPClient.java" />
         <option value="$PROJECT_DIR$/src/MandatoryAssignment1/TCPServer2.java" />
+        <option value="$PROJECT_DIR$/src/MandatoryAssignment1/Client.java" />
+        <option value="$PROJECT_DIR$/src/API/OpenWeatherMap.html" />
+        <option value="$PROJECT_DIR$/src/API/index.html" />
+        <option value="$PROJECT_DIR$/src/MandatoryAssignment1/TCPClient.java" />
         <option value="$PROJECT_DIR$/src/MandatoryAssignment1/TCPServer.java" />
       </list>
     </option>
@@ -115,6 +125,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -126,6 +139,12 @@
               <item name="Emil-DAT17C" type="b2602c69:ProjectViewProjectNode" />
               <item name="Emil-DAT17C" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Emil-DAT17C" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Emil-DAT17C" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Emil-DAT17C" type="b2602c69:ProjectViewProjectNode" />
@@ -179,12 +198,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="i&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -210,7 +227,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TCPServer2">
+  <component name="RunManager" selected="Application.TCPClient">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MandatoryAssignment1.Client" />
       <module name="Emil-DAT17C" />
@@ -312,12 +329,10 @@
       <item itemvalue="Application.Server" />
       <item itemvalue="Application.TCPClient" />
       <item itemvalue="Application.TCPServer" />
-      <item itemvalue="Application.TCPServer2" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.TCPClient" />
-        <item itemvalue="Application.TCPServer2" />
         <item itemvalue="Application.TCPServer" />
         <item itemvalue="Application.Server" />
         <item itemvalue="Application.Client" />
@@ -350,12 +365,13 @@
       <workItem from="1539157357927" duration="586000" />
       <workItem from="1539172567121" duration="1847000" />
       <workItem from="1539179056833" duration="10407000" />
-      <workItem from="1539194845994" duration="648000" />
+      <workItem from="1539194845994" duration="978000" />
+      <workItem from="1539239905242" duration="8188000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68236000" />
+    <option name="totallyTimeSpent" value="76754000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -384,7 +400,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21332276" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21649484" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -446,20 +462,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Sem 1+2 recap/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sem 1+2 recap/Teacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ArrayList/MyList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -726,32 +728,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MandatoryAssignment1/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="125" column="33" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3035#3036#0" expanded="true" />
-            <element signature="e#3071#3072#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="620">
           <caret line="1010" column="16" selection-start-line="1010" selection-start-column="16" selection-end-line="1010" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MandatoryAssignment1/TCPClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="50" column="51" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -765,10 +745,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MandatoryAssignment1/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/OpenWeatherMap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MandatoryAssignment1/TCPClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="36" column="30" lean-forward="true" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MandatoryAssignment1/TCPServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="84" selection-start-line="62" selection-start-column="84" selection-end-line="62" selection-end-column="84" />
+        <state relative-caret-position="527">
+          <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

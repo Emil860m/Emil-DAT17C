@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<form>
+    <input type="text" id="post-to-find">
+    <button type="button" id="post-to-find-btn">Find</button>
+</form>
+<h1 id="show-info"></h1>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+    var key = "53c66be207c30a098bf8cf3143a4df8c";
+    navigator.geolocation.watchPosition(function (position) {
+        var city = position.coords.accuracy;
+
+        $(document).on('click', "#post-to-find-btn", function () {
+            //var city = $('#post-to-find').val();
+            $.ajax({
+                url: "https://api.openweathermap.org/data/2.5/weather",
+                //headers: {"X-AUTH-TOKEN": "53c66be207c30a098bf8cf3143a4df8c"},
+                method: "get",
+                data: {
+                    id: city,
+                    appid: key,
+                    units: "metric",
+                },
+                success: function (resp) {
+                    console.log(resp);
+
+                    var city = resp.name;
+                    var temp = resp.main.temp;
+                    var weather = resp.weather[0].description;
+                    console.log(city)
+                    $('#show-info').text(city + ", " + temp + " degrees, " + weather);
+                },
+                error: function (resp) {
+                    console.log("somthing went vaery bad");
+                    console.log(resp);
+                }
+            });
+        });
+    });
+</script>
+
+
+</body>
+</html>
