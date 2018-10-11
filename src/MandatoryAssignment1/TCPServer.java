@@ -29,13 +29,13 @@ public class TCPServer {
 
                         int indexOfComma = message.lastIndexOf(",");
                         String userName = message.substring(5, indexOfComma);
-                        if (usernameChecker(userName)) {
-
                         Client client = new Client();
-                        client.setUserName(userName);
                         client.setSocket(socket);
                         client.setOutToClient(socket.getOutputStream());
                         client.setInFromClient(socket.getInputStream());
+                        if (usernameChecker(userName)) {
+
+                            client.setUserName(userName);
                         client.setIP(socket.getInetAddress().getHostAddress());
                         client.setPort(socket.getPort());
                         client.setConnected(true);
@@ -69,7 +69,7 @@ public class TCPServer {
                                         System.out.println(msgToAll);
                                         sendMessageToAll(msgToAll);
                                     } else {
-                                        client.getOutToClient().write("ERROR: Try one of these commands: DATA <<Free text>> or QUIT".getBytes());
+                                        client.getOutToClient().write("J_ER: Try one of these commands: DATA <<Free text>> or QUIT".getBytes());
                                     }
 
 
@@ -82,7 +82,9 @@ public class TCPServer {
                         for (Thread t : receiveThreads) {
                             t.start();
                         }
-                    }
+                    }else{
+                            client.getOutToClient().write("J_ER: Duplicate username!\n".getBytes());
+                        }
 
                     }
 

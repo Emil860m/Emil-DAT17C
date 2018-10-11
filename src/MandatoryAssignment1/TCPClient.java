@@ -12,6 +12,7 @@ public class TCPClient {
         String userName;
         OutputStream outToServer;
         InputStream inFromServer;
+        Socket clientSocket;
         boolean UNaccept = true;
 
 
@@ -25,16 +26,17 @@ public class TCPClient {
             ip = input.next();
             System.out.println("Write port:");
             port = input.nextInt();
+        clientSocket = new Socket(ip, port);
             do{
-            System.out.println("Write Username:");
+            System.out.println("Write Username: a-z, A-Z, 0-9, max 12 chars");
             userName = input.next();
-            if(true) {
+            if(userName.matches("^[a-zA-Z0-9\\-_]{1,12}$")) {
                 System.out.println("trying to connect");
 
                 String joinCMD = "JOIN " + userName + ", " + ip + ":" + port;
 
                 String finalIp = ip;
-                Socket clientSocket = new Socket(finalIp, port);
+
                 outToServer = clientSocket.getOutputStream();
                 inFromServer = clientSocket.getInputStream();
                 byte[] join = joinCMD.getBytes();
@@ -43,9 +45,16 @@ public class TCPClient {
                 inFromServer.read(accept);
                 String userNameAccept = new String(accept);
                 userNameAccept.trim();
-                if (userNameAccept.equals("J_OK"))UNaccept = false;
+                System.out.println(userNameAccept);
+                if (userNameAccept.contains("J_OK")){
+                    UNaccept = false;
+                }
+            }else{
+                System.out.println("Please write a valid username!");
             }
         }while(UNaccept);
+        outToServer = clientSocket.getOutputStream();
+        inFromServer = clientSocket.getInputStream();
         OutputStream finalOutToServer = outToServer;
         Thread send = new Thread(()->{
             try {
@@ -76,7 +85,7 @@ public class TCPClient {
                     msgIn = msgIn.trim();
 
 
-                    System.out.println(msgIn);
+                    System.out.print(msgIn);
                     if(msgIn.equalsIgnoreCase("QUIT"))test=false;
                 }while(test);
                 Thread.currentThread().interrupt();
@@ -85,12 +94,11 @@ public class TCPClient {
             }
         });
 
-        OutputStream finalOutToServer1 = outToServer;
         Thread IMAV = new Thread(()->{
            while(send.isAlive()){
                try {
                    Thread.sleep(10000);
-                   finalOutToServer1.write("IMAV".getBytes());
+                   finalOutToServer.write("IMAV".getBytes());
                } catch (InterruptedException e) {
                    e.printStackTrace();
                } catch (IOException e) {
