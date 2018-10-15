@@ -14,14 +14,8 @@ public class TCPClient {
         InputStream inFromServer;
         Socket clientSocket;
         boolean UNaccept = true;
-
-
-
-
         System.out.println("starting TCPClient main");
         Scanner input = new Scanner(System.in);
-
-
             System.out.println("Write server ip: ");
             ip = input.next();
             System.out.println("Write port:");
@@ -32,11 +26,8 @@ public class TCPClient {
             userName = input.next();
             if(userName.matches("^[a-zA-Z0-9\\-_]{1,12}$")) {
                 System.out.println("trying to connect");
-
                 String joinCMD = "JOIN " + userName + ", " + ip + ":" + port;
-
-                String finalIp = ip;
-
+                //String finalIp = ip;
                 outToServer = clientSocket.getOutputStream();
                 inFromServer = clientSocket.getInputStream();
                 byte[] join = joinCMD.getBytes();
@@ -64,7 +55,6 @@ public class TCPClient {
                     String inFromUser;
                     inFromUser = clientInput.nextLine();
                         finalOutToServer.write(inFromUser.getBytes());
-
                     if(inFromUser.equalsIgnoreCase("quit"))test = false;
                 }while(test);
                 Thread.currentThread().interrupt();
@@ -83,8 +73,6 @@ public class TCPClient {
                     finalInFromServer.read(dataIn);
                     String msgIn = new String(dataIn);
                     msgIn = msgIn.trim();
-
-
                     System.out.print(msgIn);
                     if(msgIn.equalsIgnoreCase("QUIT"))test=false;
                 }while(test);
@@ -118,12 +106,5 @@ public class TCPClient {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-
-
-
-
-
-
     }
 }

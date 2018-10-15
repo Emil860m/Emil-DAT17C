@@ -104,14 +104,6 @@ public class TCPServer {
 
     }
 
-//    public static boolean checkUserName(String userName){
-//        for (Client c: clients) {
-//            if(c.getUserName().equalsIgnoreCase(userName)){
-//                return false;
-//            }
-//        }
-//        return true;
-//    }
 
     public static void send(OutputStream output, String message){
         try{
