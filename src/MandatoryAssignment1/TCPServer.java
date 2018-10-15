@@ -43,24 +43,29 @@ public class TCPServer {
                         clients.add(client);
                         client.getOutToClient().write("J_OK \n".getBytes());
                         sendMessageToAll("List of clients: " + clients.toString());
+                            System.out.println(clients.toString());
                         System.out.println("Client added");
+                        //client.StartThread();
 
                         ArrayList<Thread> receiveThreads = new ArrayList<>();
                         Thread receive = new Thread(() -> {
-                            while (true) {
+                            while (client.isConnected()) {
                                 try {
                                     InputStream inputStream = client.getInFromClient();
                                     byte[] inFromClient = new byte[1024];
                                     inputStream.read(inFromClient);
                                     String msg = new String(inFromClient);
                                     msg.trim();
+                                    System.out.println(client.getUserName() + ", " + msg);
                                     if (msg.contains("IMAV")) {
                                         client.setSecondsSinceIMAV(0);
                                     } else if (msg.contains("QUIT")) {
                                         System.out.println("Client disconnected!");
                                         client.getOutToClient().write("QUIT".getBytes());
                                         client.setConnected(false);
+                                        client.getSocket().close();
                                         sendMessageToAll(client.getUserName() + " disconnected!");
+                                        clients.remove(client);
                                         break;
                                     } else if (msg.contains("DATA")) {
                                         msg = msg.replaceAll("DATA ", "");

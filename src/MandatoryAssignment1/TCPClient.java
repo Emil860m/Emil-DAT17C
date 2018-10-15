@@ -73,7 +73,7 @@ public class TCPClient {
                     finalInFromServer.read(dataIn);
                     String msgIn = new String(dataIn);
                     msgIn = msgIn.trim();
-                    System.out.print(msgIn);
+                    System.out.println(msgIn);
                     if(msgIn.equalsIgnoreCase("QUIT"))test=false;
                 }while(test);
                 Thread.currentThread().interrupt();
@@ -85,8 +85,8 @@ public class TCPClient {
         Thread IMAV = new Thread(()->{
            while(send.isAlive()){
                try {
-                   Thread.sleep(10000);
                    finalOutToServer.write("IMAV".getBytes());
+                   Thread.sleep(10000);
                } catch (InterruptedException e) {
                    e.printStackTrace();
                } catch (IOException e) {

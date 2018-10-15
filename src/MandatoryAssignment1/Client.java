@@ -18,7 +18,10 @@ public class Client {
         while(connected){
             try{
                 incrementIMAV();
-                if(getSecondsSinceIMAV()<10){
+                if(getSecondsSinceIMAV()<20){
+                    System.out.println("Client disconnected!");
+                    TCPServer.sendMessageToAll(userName + " disconnected!");
+                    //TCPServer.clients.remove()
                     connected = false;
                     break;
                 }
@@ -73,6 +76,12 @@ public class Client {
     }
 
     public Client() {
+        IMAVincrementer.start();
+        try {
+            IMAVincrementer.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 //    public static int getClientCount(){
 //        return clientCount;
@@ -137,5 +146,14 @@ public class Client {
     @Override
     public String toString() {
         return getUserName();
+    }
+
+    public void StartThread(){
+        IMAVincrementer.start();
+        try {
+            IMAVincrementer.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
