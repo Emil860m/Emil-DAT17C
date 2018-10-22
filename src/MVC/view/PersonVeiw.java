@@ -2,8 +2,7 @@ package MVC.view;
 
 import MVC.controller.PersonController;
 import MVC.model.Person;
-import MVC.model.Student;
-import MVC.model.Teacher;
+
 
 public class PersonVeiw {
 
