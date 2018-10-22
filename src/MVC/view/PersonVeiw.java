@@ -20,13 +20,13 @@ public class PersonVeiw {
     public static String toHTML(Person P){
         String result = "";
 //        result += "<head></head>";
-        result += "<body>";
-        result += "<h1>Name: " + P.getName() + "</h1>";
-        result += "<h1>cpr: " + P.getCpr() + "</h1>";
-        result += "<h1>Age: " + PersonController.calcAge(P) + "</h1>";
+        result += "<body>\n";
+        result += "<h1>Name: " + P.getName() + "</h1>\n";
+        result += "<h1>cpr: " + P.getCpr() + "</h1>\n";
+        result += "<h1>Age: " + PersonController.calcAge(P) + "</h1>\n";
         String type = P.getClass().toString().substring(16,P.getClass().toString().length());
-        result += "<h1>Exam("+type+"): " + P.doExam() + "</h1>";
-        result += "<h1>Type: " + type + "</h1>";
+        result += "<h1>Exam("+type+"): " + P.doExam() + "</h1>\n";
+        result += "<h1>Type: " + type + "</h1>\n";
 //        if(P instanceof Teacher){
 //            result += "<h1>Exam(Teacher): " + P.doExam() + "</h1>";
 //            result += "<h1>Type: Teacher </h1>";
