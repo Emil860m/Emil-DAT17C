@@ -12,5 +12,7 @@ public class RunMe {
 
         System.out.println(PersonVeiw.toJSON(s));
         System.out.println(PersonVeiw.toJSON(t));
+        System.out.println(PersonVeiw.toHTML(s));
+        System.out.println(PersonVeiw.toHTML(t));
     }
 }

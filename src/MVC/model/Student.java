@@ -8,7 +8,7 @@ public class Student extends Person {
     }
 
     @Override
-    public void doExam() {
-        System.out.println("I will read for the exam");
+    public String doExam() {
+        return("I will read for the exam.");
     }
 }

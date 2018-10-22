@@ -10,7 +10,7 @@ public abstract class Person {
         this.cpr = cpr;
     }
 
-    public abstract void doExam();
+    public abstract String doExam();
 
     public String getName() {
         return name;

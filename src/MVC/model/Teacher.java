@@ -7,7 +7,7 @@ public class Teacher extends Person {
     }
 
     @Override
-    public void doExam() {
-        System.out.println("I will ask the questions");
+    public String doExam() {
+        return("I will ask the questions.");
     }
 }
