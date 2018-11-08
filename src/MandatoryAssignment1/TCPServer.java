@@ -24,7 +24,7 @@ public class TCPServer {
                     input.read(dataIn);
                     String message = new String(dataIn);
                     message = message.trim();
-
+                    System.out.println(message);
                     if (message.contains("JOIN")) {
 
                         int indexOfComma = message.lastIndexOf(",");
